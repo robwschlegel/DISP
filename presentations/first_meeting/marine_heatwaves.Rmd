@@ -1,0 +1,138 @@
+---
+title: "Marine Heatwaves"
+author: "Robert W. Schlegel"
+date: "November 2nd, 2018"
+output:
+  html_document:
+    code_folding: show
+    css: template.css
+    fig_caption: yes
+    fig_width: 5
+    highlight: default
+    number_sections: yes
+    theme: yeti
+    toc: yes
+    toc_float: yes
+fontsize: 10pt
+language: Australian
+# mainfont: PT Serif
+# monofont: PT Mono
+# csl: progress-in-oceanography.csl
+# sansfont: PT Sans
+bibliography: Presentations.bib
+papersize: A4
+---
+
+
+***
+# What are they? {.tabset}
+
+## text
+<font size="6">"A prolonged discrete anomalously warm water event that can be described by its duration, intensity, rate of evolution, and spatial extent." </font>
+
+@Hobday2016
+
+## figure
+![](graph/MHW_flame.png)  
+
+## Definition {.tabset}
+
+### Time series
+![](graph/ts_full.png)
+
+### Daily boxes
+![](graph/ts_box.png)
+
+### Thresholds
+![](graph/ts_box_clim.png)
+
+### Flames
+![](graph/MHW.png)
+
+### Lollis
+![](graph/MHW_lolli.png)
+
+<!-- *** -->
+## Marine Cold-spells
+
+![](graph/MCS_flame.png)  
+
+![](graph/MCS_lolli.png)
+
+
+***
+# Why should we care?
+
+## GBR
+![](graph/dying_coral.jpeg)
+
+## The Blob {.tabset}
+
+### Fish
+![](graph/fish_kill.jpeg)
+
+### Birds
+```{r, out.width = "400px", echo=F}
+knitr::include_graphics("graph/bird_kill.jpeg")
+```
+
+### Mammals
+![](graph/seal_kill.jpeg)
+
+
+***
+## The NW Atlantic {.tabset}
+
+### Crabs
+![](graph/crabs.jpg)
+
+### Lobsters
+![](graph/lobster.jpeg)
+
+
+***
+# What are we doing about it? {.tabset}
+
+## International Working Group
+![](graph/working_group_screen_shot.png)  
+
+<http://www.marineheatwaves.org/>
+
+
+***
+## MHW tracker
+![](graph/MHW_tracker_screen_shot.png)  
+
+<https://robert-schlegel.shinyapps.io/MHWtracker/>
+
+
+***
+## Open source code
+```{r fig.width = 6, fig.height = 8, echo = FALSE, out.extra = 'style="float:left"'}
+knitr::include_graphics("graph/python_logo.png")
+```
+```{r fig.width = 6 , fig.height = 8, echo = FALSE, out.extra = 'style="float:left"'}
+knitr::include_graphics("graph/heatwaveR_logo.png")
+```
+  
+  
+***
+## DISP {.tabset}
+![](graph/hot_lobster.png)
+<font size="6">"Homarus americanus" </font>
+
+### Temperature
+![](graph/mean_temp_grids.png)
+
+### CPUE
+![](graph/mean_CPUE_grids.png)
+
+
+***
+# Questions? 
+
+![](graph/thanks_for_all_the_fish.gif)
+
+
+***
+# References
