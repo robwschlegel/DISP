@@ -100,25 +100,9 @@ knitr::include_graphics("graph/bird_kill.jpeg")
 
 
 ***
-## MHW tracker
-![](graph/MHW_tracker_screen_shot.png)  
-
-<https://robert-schlegel.shinyapps.io/MHWtracker/>
-
-
-***
-## Open source code
-```{r fig.width = 6, fig.height = 8, echo = FALSE, out.extra = 'style="float:left"'}
-knitr::include_graphics("graph/python_logo.png")
-```
-```{r fig.width = 6 , fig.height = 8, echo = FALSE, out.extra = 'style="float:left"'}
-knitr::include_graphics("graph/heatwaveR_logo.png")
-```
-  
-  
-***
 ## DISP {.tabset}
 ![](graph/hot_lobster.png)
+  
 <font size="6">"Homarus americanus" </font>
 
 ### Temperature
