@@ -2,6 +2,8 @@
 This repository holds all of the data and code necessary for the MHW-lobster DISP project.
 
 # Updates
+## Wednesday, January 16th, 2019
+  * Updated file structure
 
 ## Monday, November 26th, 2018
   * Uploaded one more reading
