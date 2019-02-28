@@ -81,7 +81,7 @@ fundy_grid <- left_join(fundy_area, grid_polys, by = "grid") %>%
 # Visualise the time series within each region
 # north_ts <- ggplot(data = north_area, aes(x = date, y = temp)) +
 #   geom_line(aes(group = grid), colour = "navy", alpha = 0.7)
-#   
+# 
 # south_ts <- ggplot(data = south_area, aes(x = date, y = temp)) +
 #   geom_line(aes(group = grid), colour = "green4", alpha = 0.7)
 # 
