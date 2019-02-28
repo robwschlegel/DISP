@@ -1,25 +1,25 @@
-#Feb. 14th, 2019
-#Week 6
-#Starting Correlations 
+# Correlation for North and South- Week 6
+#
+# Sarah Swim
+# February 14th 2019
 
 
-# Libraries ----------------------------------------------------------
+# Libraries ---------------------------------------------------------------
 
 library(tidyverse)
 library(heatwaveR)
 library(lubridate)
-library(gridExtra)
 
-# Load  -------------------------------------------------------------------
+
+# Load Data ---------------------------------------------------------------
 
 source(file = "shared/load.R")
-load(file = "Caelin/MHW_north.Rdata")
-load(file = "Caelin/MHW_south.Rdata")
+load(file = "Sarah/MHW_north.Rdata")
+load(file = "Sarah/MHW_south.Rdata")
 
-# Rename ------------------------------------------------------------------
-#This renames the date coloum in bot_temp_CPUE from "data" to "t"
 bot_temp_CPUE = bot_temp_CPUE %>% 
   rename(t = date)
+
 
 # Joining -----------------------------------------------------------------
 
@@ -33,18 +33,22 @@ South <- bot_temp_CPUE %>%
 
 # Correlation -------------------------------------------------------------
 
-cor(x = North$CPUE, y = North$thresh, use = "complete.obs")
+cor(x = North$CPUE, y = North$intensity_cumulative_abs, use = "complete.obs")
 
-cor(x = South$CPUE, y = South$intensity_cumulative, use = "complete.obs")
+cor(x = South$CPUE, y = South$intensity_cumulative_abs, use = "complete.obs")
 
 
 # Correlogram -------------------------------------------------------------
 
 library(corrgram)
+corrgram(South, order=TRUE, lower.panel=panel.shade,
+         upper.panel=panel.pie, text.panel=panel.txt,
+         main="South Coast Correlation") 
+
+library(corrgram)
 corrgram(North, order=TRUE, lower.panel=panel.shade,
          upper.panel=panel.pie, text.panel=panel.txt,
-         main="Car Milage Data in PC2/PC1 Order") 
-
+         main="North Coast Correlation") 
 #homework: read hobday paper *table specifically*
 #homework: correlogram, remove colombs you may not need, they are mess now
 
