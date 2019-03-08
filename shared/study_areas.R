@@ -76,7 +76,7 @@ fundy_grid <- left_join(fundy_area, grid_polys, by = "grid") %>%
 #   geom_polygon(data = fundy_grid, fill = "orange", colour = "black", alpha = 0.7) +
 #   borders(fill = "ivory2", colour = "black") +
 #   coord_equal(xlim = c(-68, -58), ylim = c(42, 48)) +
-#   labs(x = "Longitute", y = "Latitude")
+#   labs(x = "Longitude", y = "Latitude")
 
 # Visualise the time series within each region
 # north_ts <- ggplot(data = north_area, aes(x = date, y = temp)) +
