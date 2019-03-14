@@ -1,0 +1,64 @@
+---
+title: "Research Draft"
+author: "Calisa Staniforth"
+date: '2019-03-14'
+output: 
+  word_document:
+    reference_docx: template-calisa.docx
+bibliography: references.bib
+csl: ../shared/council-of-science-editors-alphabetical.csl
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+Name: Calisa Staniforth
+Date: Monday, January 28th, 2019
+SCIE 1507
+Supervisor: Robert Schlegel
+
+Discovering the correlation between marine heatwaves and lobster catch rates off the coast of Nova Scotia
+
+@LeBris2018
+
+## Introduction
+
+  Lobsters are crustaceans that live in all oceans around the world (Goldberg).  These marine animals have an important role in the economy and have been known as one of the most valuable resources to coastal regions.  In fact, the American lobster (Homarus americanus) is the most profitable fishery in Canada as well as in the United States (@LeBris2018).  Population sizes in these crustaceans were seen to alter after the Northwest Atlantic Ocean was hit by a marine heatwave (MHW) in 2012 (Mills et al. 2013).  A MHW occurs when ocean waters reach extremely warm temperatures for an extended amount of time (Oliver et al. 2018).  These heat events are based on their intensity, duration, the rate at which they evolve as well as their spatial extent.  More precisely, a MHW is defined as a heat event lasting five days or more with temperatures being warmer than the 90th percentile based on a 30 year historical baseline period (Hobday et al. 2016). 
+
+  The Northwest Atlantic MHW was the largest heat event to take place in this region in 30 years previous to 2012 (Mills et al. 2013).  The SST was found to be 1-3°C more than the average from the years 1982 to 2011 (Mills et al. 2013).  This heatwave affected multiple marine ecosystems, many of which were coastal.  This rise in temperature led to a shift in the geographic distribution as well as migratory cycles of many coastal species.  Marine species that habituated warm waters responded to this MHW by moving northward (Mills et al. 2013).  This heat event showed to have a migratory effect on the American lobster because they had begun to move from offshore areas into coastal areas.  This made lobster fishing much easier considering that they were in more shallow, closer regions (Mills et al. 2013).  Not only did this rise in heat affect their geographic distribution, but studies show that it also had an effect on lobster larvae, increasing their rate of development (Le Bris et al. 2018).  According to previous studies, the abundance of smaller lobsters seems to increase in warmer temperatures (Le Bris et al. 2018).   More negatively, the spread of epizootic shell disease in lobsters was seen to be a direct outcome of increasing temperatures (Mills et al. 2013). 
+  
+## Methods
+
+Data collection
+
+The data we will be working with was collected in the field by lobstermen from Nova Scotia.  These lobstermen placed temperature recorders inside of lobster traps and subsequently threw the equipped traps overboard.  One week later, the lobstermen went back to the location where they dropped the traps to collect them.  They noted the temperature indicated on the temperature recorders as well as the number of lobsters caught.  Afterwards, this information was sent to the Bedford Institute of Oceanography for processing.  This data was changed into CPUE (catch per unit effort) which is an indirect measure of the abundance of species of interest (Heinänen 2018). This process was repeated each week for 10 years (2006 to 2016). 
+	
+Analyses
+
+In order to process the data taken on site, we will be using a computer program called “R”.  This is a statistical programming language in which anything from creating your own graphs and maps to manipulating data can be done.  With R, bias will be prevented in the results as they can be reproduced.  Therefore, every single step can be traced meaning nothing will be hidden or left out.  Being able to reproduce the results from a research is very important because it gives the reader confidence in the study as well as allowing other researchers to test out the findings themselves.  It will take 3 hours to calculate the MHWs which occurred during the time of our study (2006-2016).  Once this is finished we will then be able to find the correlation between lobster catch rates and MHWs which will take another 3 hours.  Afterwards, we will be able to create a linear model between the lobster catch data and MHWs.  It will take us 3 hours of work to create graphs and 6 hours to interpret our data.  We will also be creating various figures such as a map of our study area, a figure showing what a MHW looks like as well as a figure of all the MHWs at a specific study site. 
+  
+Interpretation of the results
+
+Once our correlations are completed we will be able to see if the relationship between MHWs and lobster catch rates are positive or negative.  If we find that the relationship is positive, we will be able to assume that lobsters prefer warmer waters which would also benefit the lobster industry.  If the relationship is found to be negative, we will be able to assume that warm waters are not good for lobsters which would negatively affect these lobster fisheries.  The standard requirement for research studies is to have 30 years of data in order to come to a definitive conclusion.  Since we only have 10 years of lobster and temperature data, we will not be able to come to a definite conclusion.  However, since this is the first study to look at the direct relationship between lobsters and MHWs, we will be able to create a base-line which will allow further research to build up this study and potentially come to a definite conclusion after some time.  No matter the outcome of this study, there will be an advance in knowledge of the relationship between MHWs and lobster catch.
+
+![](../../Documents/Winter term/Research Project/Figures/study area.png)
+
+## Literature Cited
+
+
+
+Le Bris AL, Mills KE, Wahle RA, Chen Y, Alexander MA, Allyn AJ, Schuetz JG, Scott JD, Pershing AJ. 2018. Climate vulnerability and resilience in the most valuable North American fishery. Ocean Sci. 115(8):1831-1836.
+
+Heinänen S, Chudzinska ME, Brandi M, Teo TZE, Rong UK, Doksaeter SL, Thomsen F. 2018. Integrated modelling of Atlantic mackerel distribution patterns and movements: a template for dynamic impact assessments. Ecol Modell. 387(10):118-133.
+
+Hobday AJ, Alexander LV, Perkins SE, Smale DA, Straub SC, Oliver EC, Benthuysen JA, Burrows MT, Donat MG, Feng M, Holbrook NJ. 2016. A hierarchical approach to defining marine heatwaves. Ocean Sci. 141(1):227-38.
+
+Mills KE, Pershing AJ, Brown CJ, Chen Y, Chiang FS, Holland DS, Lehuta S, Nye JA, Sun JC, Thomas AC, et al. 2013. Fisheries management in a changing climate: lessons
+from the 2012 ocean heat wave in the Northwest Atlantic. Fish Manag. 26(2):191–195.
+
+Oliver ECJ, Donat MG, Burrows MT, Moore PJ, Smale DA, Alexander LV, Benthuysen JA, Feng, Gupta AS, Hobday AJ, et al. 2018. Longer and more frequent marine heatwaves over the past century. Nat Commun. 1324(2018).
+
+Susan Goldberg. American lobster.  Washington (DC): National Geographic; [accessed 2019 Mar 9]. https://www.nationalgeographic.com/animals/invertebrates/a/american-lobster/.
+
+
