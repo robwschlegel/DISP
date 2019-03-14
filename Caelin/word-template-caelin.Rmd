@@ -3,8 +3,9 @@ title: "Word Template"
 author: "Caelin Randall-Scott"
 date: "March 14, 2019"
 output:
-  word_document: default
-  html_document: default
+  word_document:
+    reference_docx: template-caelin.docx
+  
 ---
 
 ```{r setup, include=FALSE}
