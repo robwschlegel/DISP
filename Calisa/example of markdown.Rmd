@@ -1,0 +1,23 @@
+---
+title: "Example of markdown"
+author: "Calisa Staniforth"
+date: '2019-03-07'
+output: word_document
+bibliography: references.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+According to @Hobday2016, MHWs last for at least five days.
+
+Lobsters are known to enjoy hot water, on occasion [@LeBris2018].
+
+A study conducted by @Campbell1991 showed that lobster population increased off the coast of Halifax.  This was shown to be correlated to a rise in SST.
+
+![Figure 1:the study area.](../../Documents/Winter term/Research Project/Figures/study area.png)
+
+# References
+
+
