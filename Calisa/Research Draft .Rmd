@@ -1,24 +1,20 @@
 ---
-title: "Research Draft"
+title: "Discovering the correlation between marine heatwaves and lobster catch rates off the coast of Nova Scotia"
 author: "Calisa Staniforth"
-date: '2019-03-14'
+date: 'Monday, March 18th, 2019'
+class: "SCIE 1507""
+supervisor: "Robert Schlegel""
 output: 
   word_document:
     reference_docx: template-calisa.docx
 bibliography: references.bib
-csl: ../shared/council-of-science-editors-alphabetical.csl
+csl: ../shared/council-of-science-editors-author-date.csl
 
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-Name: Calisa Staniforth
-Date: Monday, January 28th, 2019
-SCIE 1507
-Supervisor: Robert Schlegel
-
-Discovering the correlation between marine heatwaves and lobster catch rates off the coast of Nova Scotia
 
 @LeBris2018
 
