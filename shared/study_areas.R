@@ -25,14 +25,14 @@ temperature_month_proportion <- bot_temp_CPUE %>%
   mutate(month_prop = round(month_count/total_count, 2))
 
 # Visualise the count per month
-# ggplot(temperature_month_proportion, aes(x = month, y = grid)) +
-#   geom_raster(aes(fill = month_count)) +
-#   scale_fill_distiller(na.value = "white", palette = "RdPu", direction = 1)
+ggplot(temperature_month_proportion, aes(x = month, y = grid)) +
+  geom_raster(aes(fill = month_count)) +
+  scale_fill_distiller(na.value = "white", palette = "RdPu", direction = 1)
 
 # Visualise the proportion per month
-# ggplot(temperature_month_proportion, aes(x = month, y = grid)) +
-#   geom_raster(aes(fill = month_prop)) +
-#   scale_fill_distiller(na.value = "white", palette = "OrRd", direction = 1)
+ggplot(temperature_month_proportion, aes(x = month, y = grid)) +
+  geom_raster(aes(fill = month_prop)) +
+  scale_fill_distiller(na.value = "white", palette = "OrRd", direction = 1)
 
 
 # Study areas -------------------------------------------------------------
@@ -70,26 +70,26 @@ fundy_grid <- left_join(fundy_area, grid_polys, by = "grid") %>%
   unique()
 
 # Visualise the three different areas
-# ggplot(north_area, aes(x = lon, y = lat, group = grid)) +
-#   geom_polygon(data = north_grid, fill = "navy", colour = "black", alpha = 0.7) +
-#   geom_polygon(data = south_grid, fill = "green4", colour = "black", alpha = 0.7) +
-#   geom_polygon(data = fundy_grid, fill = "orange", colour = "black", alpha = 0.7) +
-#   borders(fill = "ivory2", colour = "black") +
-#   coord_equal(xlim = c(-68, -58), ylim = c(42, 48)) +
-#   labs(x = "Longitute", y = "Latitude")
+ggplot(north_area, aes(x = lon, y = lat, group = grid)) +
+  geom_polygon(data = north_grid, fill = "navy", colour = "black", alpha = 0.7) +
+  geom_polygon(data = south_grid, fill = "green4", colour = "black", alpha = 0.7) +
+  geom_polygon(data = fundy_grid, fill = "orange", colour = "black", alpha = 0.7) +
+  borders(fill = "ivory2", colour = "black") +
+  coord_equal(xlim = c(-68, -58), ylim = c(42, 48)) +
+  labs(x = "Longitute", y = "Latitude")
 
 # Visualise the time series within each region
-# north_ts <- ggplot(data = north_area, aes(x = date, y = temp)) +
-#   geom_line(aes(group = grid), colour = "navy", alpha = 0.7)
-#   
-# south_ts <- ggplot(data = south_area, aes(x = date, y = temp)) +
-#   geom_line(aes(group = grid), colour = "green4", alpha = 0.7)
-# 
-# fundy_ts <- ggplot(data = fundy_area, aes(x = date, y = temp)) +
-#   geom_line(aes(group = grid), colour = "orange", alpha = 0.7)
-# 
-# all_ts <- ggpubr::ggarrange(north_ts, south_ts, fundy_ts, ncol = 1, nrow = 3)
-# all_ts
+north_ts <- ggplot(data = north_area, aes(x = date, y = temp)) +
+  geom_line(aes(group = grid), colour = "navy", alpha = 0.7)
+
+south_ts <- ggplot(data = south_area, aes(x = date, y = temp)) +
+  geom_line(aes(group = grid), colour = "green4", alpha = 0.7)
+
+fundy_ts <- ggplot(data = fundy_area, aes(x = date, y = temp)) +
+  geom_line(aes(group = grid), colour = "orange", alpha = 0.7)
+
+all_ts <- ggpubr::ggarrange(north_ts, south_ts, fundy_ts, ncol = 1, nrow = 3)
+all_ts
 
 
 # Finding funny time series -----------------------------------------------
@@ -107,3 +107,4 @@ fundy_grid <- left_join(fundy_area, grid_polys, by = "grid") %>%
 #   geom_line(data = odd_mean, aes(y = mean_temp))
 
 # The few odd time series do not appear to have a large effect on the overall mean and so have not been removed
+
