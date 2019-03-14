@@ -1,0 +1,19 @@
+---
+title: "An example markdown file"
+author: "Robert Schlegel"
+date: "07/03/2019"
+output: word_document
+bibliography: references_shared.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+According to @Hobday2016, MHWs last for at least five days.
+
+Lobsters are known to enjoy hot water, on occasion [@LeBris2018].
+
+![Figure 1: The study area.](../data/GridCells_CPUE_Map_GridID.png)
+
+# References
