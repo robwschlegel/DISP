@@ -12,11 +12,29 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+# Firgure Examples
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+### Map of Study Area
+```{r}
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+library(tidyverse)
+library(heatwaveR)
+library(lubridate)
+library(gridExtra)
+source("../shared/statistics.R")
+# 
+# ggplot(north_area, aes(x = lon, y = lat, group = grid)) +
+#   geom_polygon(data = north_grid, fill = "navy", colour = "black", alpha = 0.7) +
+#   geom_polygon(data = south_grid, fill = "green4", colour = "black", alpha = 0.7) +
+#   geom_polygon(data = fundy_grid, fill = "orange", colour = "black", alpha = 0.7) +
+#   borders(fill = "ivory2", colour = "black") +
+#   coord_equal(xlim = c(-68, -58), ylim = c(42, 48)) +
+#   labs(x = NULL, y = NULL) +
+  # labs(x = "Longitude", y = "Latitude")
+```
+
+
+  
 
 ```{r cars}
 summary(cars)
