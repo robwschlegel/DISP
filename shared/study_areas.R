@@ -70,10 +70,6 @@ fundy_grid <- left_join(fundy_area, grid_polys, by = "grid") %>%
   unique()
 
 # Visualise the three different areas
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d9315b2e51383572ef59cfaa421fb3c4212e344d
 ggplot(north_area, aes(x = lon, y = lat, group = grid)) +
   geom_polygon(data = north_grid, fill = "navy", colour = "black", alpha = 0.7) +
   geom_polygon(data = south_grid, fill = "green4", colour = "black", alpha = 0.7) +
@@ -81,7 +77,6 @@ ggplot(north_area, aes(x = lon, y = lat, group = grid)) +
   borders(fill = "ivory2", colour = "black") +
   coord_equal(xlim = c(-68, -58), ylim = c(42, 48)) +
   labs(x = "Longitute", y = "Latitude")
-<<<<<<< HEAD
 
 # Visualise the time series within each region
 north_ts <- ggplot(data = north_area, aes(x = date, y = temp)) +
@@ -94,8 +89,7 @@ fundy_ts <- ggplot(data = fundy_area, aes(x = date, y = temp)) +
   geom_line(aes(group = grid), colour = "orange", alpha = 0.7)
 
 all_ts <- ggpubr::ggarrange(north_ts, south_ts, fundy_ts, ncol = 1, nrow = 3)
-all_ts
-=======
+# all_ts
 
 # Visualise the time series within each region
 north_ts <- ggplot(data = north_area, aes(x = date, y = temp)) +
@@ -108,8 +102,8 @@ fundy_ts <- ggplot(data = fundy_area, aes(x = date, y = temp)) +
   geom_line(aes(group = grid), colour = "orange", alpha = 0.7)
 
 all_ts <- ggpubr::ggarrange(north_ts, south_ts, fundy_ts, ncol = 1, nrow = 3)
-all_ts
-=======
+# all_ts
+
 # ggplot(north_area, aes(x = lon, y = lat, group = grid)) +
 #   geom_polygon(data = north_grid, fill = "navy", colour = "black", alpha = 0.7) +
 #   geom_polygon(data = south_grid, fill = "green4", colour = "black", alpha = 0.7) +
@@ -130,8 +124,6 @@ all_ts
 # 
 # all_ts <- ggpubr::ggarrange(north_ts, south_ts, fundy_ts, ncol = 1, nrow = 3)
 # all_ts
->>>>>>> fe49c1e9d8eee85257d0ac7d85846a81cd7bace4
->>>>>>> d9315b2e51383572ef59cfaa421fb3c4212e344d
 
 
 # Finding funny time series -----------------------------------------------
