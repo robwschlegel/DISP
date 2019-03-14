@@ -31,11 +31,17 @@ South <- bot_temp_CPUE %>%
   left_join(MHW_south$climatology, by = "t") %>% 
   left_join(MHW_south$event, by = "event_no")
 
-# Correlation -------------------------------------------------------------
+Fundy <- bot_temp_CPUE %>% 
+  left_join(MHW_fundy$climatology, by = "t") %>% 
+  left_join(MHW_fundy$event, by = "event_no")
 
-cor(x = North$CPUE, y = North$thresh, use = "complete.obs")
+# Correlation CPUE and duration -------------------------------------------------------------
 
-cor(x = South$CPUE, y = South$intensity_cumulative, use = "complete.obs")
+cor(x = North$CPUE, y = North$duration, use = "complete.obs")
+
+cor(x = South$CPUE, y = South$duration, use = "complete.obs")
+
+cor(x = Fundy$CPUE, y = Fundy$duration, use = "complete.obs")
 
 
 # Correlogram -------------------------------------------------------------

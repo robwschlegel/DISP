@@ -52,6 +52,12 @@ temperature_south <- bot_temp_CPUE %>%
   summarise(mean_temp = mean(temp, na.rm = TRUE)) %>% 
   dplyr::rename(t = date, temp = mean_temp)
 
+temperature_fundy <- bot_temp_CPUE %>% 
+  filter(!grid %in% 322:368) %>%  #! means we want the grid coloums that are not 323:368
+  group_by(date) %>% 
+  summarise(mean_temp = mean(temp, na.rm = TRUE)) %>% 
+  dplyr::rename(t = date, temp = mean_temp)
+
 
 # Calculating Climatologies ------------------------------------------------------------
 
@@ -59,10 +65,14 @@ climatology_north <- ts2clm(temperature_north, climatologyPeriod = c("2006-01-01
 
 climatology_south <- ts2clm(temperature_south, climatologyPeriod = c("2006-01-01", "2016-12-23"), maxPadLength = 7)
 
+climatology_fundy <- ts2clm(temperature_fundy, climatologyPeriod = c("2006-01-01", "2016-12-23"), maxPadLength = 7)
+
+
 MHW_north <- detect_event(data = climatology_north)
   
 MHW_south <- detect_event(data = climatology_south)  
 
+MHW_fundy <- detect_event(data = climatology_fundy)  
 
 
 # Figure ------------------------------------------------------------------
