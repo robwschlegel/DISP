@@ -5,36 +5,25 @@ date: "March 14, 2019"
 output:
   word_document:
     reference_docx: template-caelin.docx
-  
+bibliography: references_Caelin.bib
+csl: ../shared/council-of-science-editors-author-date.csl
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+@Hobday2016
+@LeBris2018
+@Mills2013
+@R2019
+
 # Firgure Examples
 
 ### Map of Study Area
-```{r}
 
-library(tidyverse)
-library(heatwaveR)
-library(lubridate)
-library(gridExtra)
-source("../shared/statistics.R")
-# 
-# ggplot(north_area, aes(x = lon, y = lat, group = grid)) +
-#   geom_polygon(data = north_grid, fill = "navy", colour = "black", alpha = 0.7) +
-#   geom_polygon(data = south_grid, fill = "green4", colour = "black", alpha = 0.7) +
-#   geom_polygon(data = fundy_grid, fill = "orange", colour = "black", alpha = 0.7) +
-#   borders(fill = "ivory2", colour = "black") +
-#   coord_equal(xlim = c(-68, -58), ylim = c(42, 48)) +
-#   labs(x = NULL, y = NULL) +
-  # labs(x = "Longitude", y = "Latitude")
-```
+![](Map_of_Study_Area.png)
 
-
-  
 
 ```{r cars}
 summary(cars)
@@ -49,3 +38,5 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+#Literature Cited

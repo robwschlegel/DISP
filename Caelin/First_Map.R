@@ -53,7 +53,9 @@ plot2 <- ggplot(data = grid_polys_extra, aes(x = lon, y= lat, group = grid)) +
 
 grid.arrange(plot1, plot2, nrow=2, ncol=1)
 
+plot1
 
+plot2
 
 
 

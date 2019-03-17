@@ -94,7 +94,7 @@ fundy_grid <- left_join(fundy_area, grid_polys, by = "grid") %>%
 
 # Finding funny time series -----------------------------------------------
 
-# odd_ts <- south_area %>% 
+# odd_ts <- south_area %>%
 #   filter(date >= "2015-01-01", date <= "2015-04-30")
 # 
 # odd_mean <- south_area %>%

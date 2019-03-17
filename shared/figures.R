@@ -22,13 +22,13 @@ map <- ggplot(north_area, aes(x = lon, y = lat, group = grid)) +
   borders(fill = "ivory2", colour = "black") +
   coord_equal(xlim = c(-68, -58), ylim = c(42, 48)) +
   labs(x = NULL, y = NULL)
-  # labs(x = "Longitude", y = "Latitude")
+  labs(x = "Longitude", y = "Latitude")
 ggsave(filename = "shared/map.png", plot = map, height = 5, width = 6)
 
 
 # Figure 2 ----------------------------------------------------------------
 # MHW figure
-# ggplot(data = north_MHW, aes())
+ggplot(data = north_MHW, aes())
 heatwaveR::event_line(north_MHW)
 
 

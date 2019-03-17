@@ -1,0 +1,25 @@
+---
+title: "Final Research Paper Figures"
+author: "Caelin Randall-Scott"
+date: "March 16, 2019"
+output:
+  word_document:
+    reference_docx: template-caelin.docx
+bibliography: references_Caelin.bib
+csl: ../shared/council-of-science-editors-author-date.csl
+---
+
+<!-- This is where I will practice putting all my final figures into a word document -->
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+![Figure 1: This map shows where the three study areas (North, South and Fundy) are divided.](Study_Area_Three_Sections.png)
+
+
+![Figugre 2: This figure shows the monthy distribution of bottom temperatures recorded.](Temperature_Month_Summary.png)
+
+
+
+![Figure 3: This figure highlights the mean temperature and CPUE over the ten years where data was collected.](Mean_Temp_and_CPUE_Caelin.png)
