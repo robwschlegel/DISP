@@ -4,7 +4,7 @@ author: "Sarah Swim"
 date: 'March 14, 2019'
 output:
   word_document:
-    reference_docx: Word_Templates.docx
+    reference_docx: ../Caelin/template-caelin.docx
 bibliography: references_sarah.bib
 ---
 
