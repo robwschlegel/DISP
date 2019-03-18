@@ -29,23 +29,23 @@ ggplot(north_area, aes(x = lon, y = lat, group = grid)) +
 
 # 1. Lolliplot
 
-MHW_north <- detect_event(data=climatology_north)
+# MHW_north <- detect_event(data=climatology_north)
 
-MHW_south <- detect_event(data=climatology_south)
+# MHW_south <- detect_event(data=climatology_south)
 
-MHW_fundy <- detect_event(data =climatology_fundy)
+# MHW_fundy <- detect_event(data =climatology_fundy)
 
-plot1 <- lolli_plot(MHW_north, event_count = 7)
+plot1 <- lolli_plot(north_MHW, event_count = 7)
 
-plot2 <- lolli_plot(MHW_south, event_count = 7)
+plot2 <- lolli_plot(south_MHW, event_count = 7)
 
-plot3 <- lolli_plot(MHW_fundy, event_count = 7)
+plot3 <- lolli_plot(fundy_MHW)
 
 ggarrange(plot1, plot2, nrow = 2, ncol = 1) # end of lolliplot function
 
-plot1.1 <- event_line(MHW_north, category = T)
+plot1.1 <- event_line(north_MHW, category = T)
 
-plot1.2 <- event_line(MHW_south, category = T) 
+plot1.2 <- event_line(south_MHW, category = T) 
 
 ggarrange(plot1.1, plot1.2, nrow = 2, ncol = 1) # ggarrange figure
 
@@ -59,8 +59,13 @@ heatwaveR::event_line(north_MHW)
 
 # Scatterplot
 
-ggplot(data= north_MHW_res, aes(x = mean_CPUE, y = duration)) +
+ggplot(data = north_MHW_res, aes(x = mean_CPUE, y = duration)) +
   geom_point() +
   geom_smooth(method = "lm", se = F) +
   geom_label(aes(label = paste0("r = ", round(north_cor[1,2],2)), x = 1.2, y = 20))
 
+ggplot(data = south_MHW_res, aes(x = mean_CPUE, y = duration)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = F) +
+  geom_label(aes(label = paste0("r = ", round(south_cor[1,2],2)), x = 1.5, y = 50)) +
+  scale_x_continuous(limits = c(0.4, 2))
