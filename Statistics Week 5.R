@@ -33,7 +33,7 @@ ggplot(data = grid_polys_extra_month, aes(x = lon, y = lat, group = grid)) +
   geom_polygon(aes(fill = month_count), colour = "black") +
   coord_equal(xlim = c(-68, -58), ylim = c(42, 48)) +
   scale_fill_viridis_c(option = "D") +
-  labs(x = "Longitute", y = "Latitude") +
+  labs(x = "Longitude", y = "Latitude") +
   guides(fill = guide_colorbar(title = "Mean\nTemp")) +
   theme(legend.position = "right", 
         panel.background = element_rect(fill = "aquamarine")) +
