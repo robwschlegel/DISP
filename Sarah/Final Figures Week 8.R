@@ -73,12 +73,21 @@ heatwaveR::event_line(north_MHW)
 
 # Correlation
 
-ggplot(data = north_MHW_res, aes(x = mean_CPUE, y = duration)) +
+ggplot(data = north_MHW_res, aes(x = mean_CPUE, y = duration)) + 
   geom_point() +
   geom_smooth(method = "lm", se = FALSE) +
   geom_label(aes(label = paste0("r = ",round(north_cor[1,2], 2)), x = 1.2, y = 20))
+
+ggplot(data = south_MHW_res, aes(x = mean_CPUE, y = duration)) + 
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  geom_label(aes(label = paste0("r = ",round(south_cor[1,2], 2)), x = 2, y = 45))
+ 
+
+
     
 # Scatter plot (best and worst correlation?)
 # y = mean intensity, x = CPUE, with line
 
-
+#scale_x_continuous(x=7)
+#Calisa
