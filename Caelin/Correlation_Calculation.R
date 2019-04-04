@@ -124,30 +124,30 @@ Fundy <- bot_temp_CPUE %>%
 
 # Correlation CPUE and duration -------------------------------------------------------------
 
-cor(x = North$CPUE, y = North$duration, use = "complete.obs")
+cor(x = north_MHW_res$mean_CPUE, y = north_MHW_res$duration, use = "pairwise.complete.obs")
 
-cor(x = South$CPUE, y = South$duration, use = "complete.obs")
+cor(x = south_MHW_res$mean_CPUE, y = south_MHW_res$duration, use = "pairwise.complete.obs")
 
-cor(x = Fundy$CPUE, y = Fundy$duration, use = "complete.obs")
+cor(x = fundy_MHW_res$mean_CPUE, y = fundy_MHW_res$duration, use = "pairwise.complete.obs")
 
 
 # Correlation CPUE and intensite_mean_relThresh -------------------------------------
 
-cor(x = North$CPUE, y = North$intensity_mean_relThresh, use = "complete.obs")
+cor(x = north_MHW_res$mean_CPUE, y = north_MHW_res$intensity_mean, use = "complete.obs")
 
-cor(x = South$CPUE, y = South$intensity_mean_relThresh, use = "complete.obs")
+cor(x = south_MHW_res$mean_CPUE, y = south_MHW_res$intensity_mean, use = "complete.obs")
 
-cor(x = Fundy$CPUE, y = Fundy$intensity_mean_relThresh, use = "complete.obs")
+cor(x = fundy_MHW_res$mean_CPUE, y = fundy_MHW_res$intensity_mean, use = "complete.obs")
 
 
 
 # Correlation CPUE and intensity_mean_abs----------------------------------------------------
 
-cor(x = North$CPUE, y = North$intensity_mean_abs, use = "complete.obs")
+cor(x = north_MHW_res$mean_CPUE, y = north_MHW_res$intensity_mean_relThresh, use = "pairwise.complete.obs")
 
-cor(x = South$CPUE, y = South$intensity_mean_abs, use = "complete.obs")
+cor(x = south_MHW_res$mean_CPUE, y = south_MHW_res$intensity_mean_relThresh, use = "pairwise.complete.obs")
 
-cor(x = Fundy$CPUE, y = Fundy$intensity_mean_abs, use = "complete.obs")
+cor(x = fundy_MHW_res$mean_CPUE, y = fundy_MHW_res$intensity_mean_relThresh, use = "pairwise.complete.obs")
 
 
 # Correlation CPUE and season----------------------------------------------------

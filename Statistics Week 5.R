@@ -55,6 +55,12 @@ temp_south <- bot_temp_CPUE %>%
   summarise(mean_temp = mean(temp, na.rm = TRUE)) %>% 
   dplyr::rename(t = date, temp = mean_temp)
 
+temp_fundy <- bot_temp_CPUE %>% 
+  filter(!grid %in% 322:368) %>% # '!' mark means not the thing we want
+  group_by(date) %>% 
+  summarise(mean_temp = mean(temp, na.rm = TRUE)) %>% 
+  dplyr::rename(t = date, temp = mean_temp)
+
 
 # Calculating Climatology -------------------------------------------------
 
@@ -62,9 +68,15 @@ climat_north <- ts2clm(temp_north, climatologyPeriod = c("2006-01-01", "2016-12-
   
 climat_south <- ts2clm(temp_south, climatologyPeriod = c("2006-01-01", "2016-12-23"), maxPadLength = 7)
 
+climat_fundy <- ts2clm(temp_south, climatologyPeriod = c("2006-01-01", "2016-12-23"), maxPadLength = 7)
+
+
 MHW_north <- detect_event(data = climat_north)
 
 MHW_south <- detect_event(data = climat_south)
+
+MHW_fundy <- detect_event(data = climat_fundy)
+
 
 
 # Graphs ------------------------------------------------------------------
@@ -73,7 +85,10 @@ p1 <- lolli_plot(MHW_north, event_count = 3)
 
 p2 <- lolli_plot(MHW_south, event_count = 3)
 
-grid.arrange(p1, p2, nrow = 2, ncol = 1)
+p3 <- lolli_plot(MHW_fundy, event_count = 3)
+
+
+grid.arrange(p1, p2, p3)
 
  # to make time series
 
@@ -81,7 +96,10 @@ plot_1 <- event_line(data = MHW_north, metric = "intensity_max", category = TRUE
 
 plot_2 <- event_line(data = MHW_south, metric = "intensity_max", category = TRUE)
 
-grid.arrange(plot_1, plot_2, nrow = 2, ncol = 1)
+plot_3 <- event_line(data = MHW_fundy, metric = "intensity_max", category = TRUE)
+
+
+grid.arrange(plot_1, plot_2, plot_3, nrow = 3, ncol = 1)
 
 
 # New Object --------------------------------------------------------------

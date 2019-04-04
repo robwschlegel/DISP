@@ -35,7 +35,7 @@ map1 <- ggplot(data = grid_polys_extra, aes(x = lon, y = lat, group = grid)) +
         axis.text = element_text(size = 1))
   
 
-map2 <- ggplot(data = grid_polys_extra_CPUE, aes(x = lon, y = lat, group = grid)) +
+map2 <- ggplot(data = grid_polys_extra, aes(x = lon, y = lat, group = grid)) +
   borders(fill = "ivory2", colour = "black") +
   geom_polygon(aes(fill = CPUE_count), colour = "black") +
   coord_equal(xlim = c(-68, -58), ylim = c(42, 48)) +

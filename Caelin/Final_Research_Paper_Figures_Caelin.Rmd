@@ -14,12 +14,33 @@ csl: ../shared/council-of-science-editors-author-date.csl
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
-![Figure 1: This map shows where the three study areas (North, South and Fundy) are divided.](Study_Area_Three_Sections.png)
-
-
-![Figugre 2: This figure shows the monthy distribution of bottom temperatures recorded.](Temperature_Month_Summary.png)
+![Figure 1: The study area.](../data/Gridcells_CPUE_Map_GridID.png)
 
 
 
-![Figure 3: This figure highlights the mean temperature and CPUE over the ten years where data was collected.](Mean_Temp_and_CPUE_Caelin.png)
+![Figure 2: This map shows the divisions within the study area (North, South and Fundy) are divided.](Study_Area_Three_Sections.png)
+
+
+![Figugre 3: This figure shows the monthy distribution of bottom temperatures recorded.](Temperature_Month_Summary.png)
+
+
+
+![Figure 4: This figure highlights the mean temperature and CPUE over the ten years where data was collected.](Mean_Temp_and_CPUE_Caelin.png)
+
+
+![Figure 5: This figure shows the peak temperatures in each study area over the ten year time span. The peak temperatures represent the MHWs that occured at that time.](Lolli_Plot_MHW.png)
+
+
+
+![Figure 6: This figure shows the scatter plots of the contrasted correlations in the North study area.](North_Correlation.png)
+
+
+
+![Figure 7: This figure shows the scatter plots of the contrasted correlations in the South study area.](South_Correlation.png)
+
+
+
+![Figure 8: This figure shows the scatter plots of the contrasted correlations in the Fundy study area.](Fundy_Correlation.png)
+
+
+
